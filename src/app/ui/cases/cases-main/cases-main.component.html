@@ -1,0 +1,33 @@
+<div class="cases">
+  <div class="cases__content _container">
+    <div class="cases__search">
+      <input class="cases__search-input">
+
+
+      <div class="cases__search-close">
+        <img src="img/close.svg" alt="">
+      </div>
+      <div class="cases__search-btn">
+
+        Поиск
+      </div>
+    </div>
+    <div class="cases__inner inner-cases">
+      <div class="inner-cases__item" *ngFor="let item of cases">
+        <div class="inner-cases__img">
+
+        </div>
+        <h2 class="inner-cases__title title">
+          <img [src]="consts.pictureNicheDefault" alt="">
+          Ниша
+        </h2>
+        <div class="inner-cases__text">
+          Краткое описание краткое описание краткое описание краткое описание
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+

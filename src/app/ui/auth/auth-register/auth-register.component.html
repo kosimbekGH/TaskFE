@@ -1,0 +1,62 @@
+<div class="registration">
+
+  <div class="welcome__content welcome__content-reg _container">
+
+    <div class="welcome__wrap welcome__wrap-row">
+      <h1 class="welcome__title title-up title">
+        Регистрация
+      </h1>
+      <a href="#" class="welcome__logo welcome__logo-reg">
+        <img [src]="consts.pictureLogo" alt="">
+      </a>
+
+    </div>
+    <form class="welcome__form" novalidate #form="ngForm" (ngSubmit)="onSubmit()">
+
+
+      <div class="welcome__input">
+        <input type="email" name="userEmail" #userEmail="ngModel"
+               [(ngModel)]="formData.email" required placeholder="E-mail (логин)*"
+               [class.border-danger]="userEmail.invalid && userEmail.touched" email>
+      </div>
+
+      <div class="welcome__input">
+        <input type="email" name="userEmail" #userName="ngModel"
+               [(ngModel)]="formData.userName" required placeholder="Имя пользователя*"
+               [class.border-danger]="userName.invalid && userName.touched">
+      </div>
+
+
+      <div class="welcome__input password">
+        <input [type]="password" name="userPassword" #userPassword="ngModel"
+               [(ngModel)]="formData.password" required minlength="8" placeholder="Пароль*"
+               [class.border-danger]="userPassword.invalid && userPassword.touched">
+        <span (click)="showPassword()">
+    <img class="password__img password__show"
+         src="assets/images/show-pass.png"
+         aria-hidden="true"
+         *ngIf="!show"
+    >
+
+     <img class="password__img"
+          src="assets/images/show-pass.png"
+          aria-hidden="true"
+          *ngIf="show"
+     >       </span>
+      </div>
+
+
+      <div class="welcome__btn welcome__btn-reg welcome__btn-mini" style="text-align: center;">
+        <button class="btn btn-mini" type="submit" [disabled]="form.invalid">
+          Создать аккаунт
+        </button>
+
+        <a href="" class="btn btn-link">
+          Отмена
+        </a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
