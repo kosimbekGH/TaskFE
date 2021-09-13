@@ -1078,7 +1078,7 @@ section.news .news__title {
 }
 
 section.nisha .nisha__content {
-  padding: 10.9rem 0rem 10rem 0rem;
+  padding: 10.9rem 0rem 0rem 0rem;
 }
 
 section.nisha .nisha__title {
@@ -1093,7 +1093,6 @@ section.nisha .nisha__title {
 
 .nisha__subtitle {
   font-size: 3rem;
-  opacity: 0.7;
   margin: 0rem 0rem 2.7rem 0rem;
 }
 
@@ -1109,6 +1108,7 @@ section.nisha .nisha__title {
 }
 
 .inner-nisha__item {
+  max-width: 33.1rem;
   background: var(--main-white);
   border-radius: 2.6rem;
   padding: 2.4rem;
@@ -1604,7 +1604,8 @@ section.nisha .nisha__title {
 
 .name-account__title {
   font-size: 1.9rem;
-  margin: 0rem 0rem 1.2rem 0rem;
+  margin: 0rem 0rem 2.2rem 0rem;
+  text-transform: uppercase;
 }
 
 .name-account__btn {
@@ -1627,6 +1628,7 @@ section.nisha .nisha__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1728,6 +1730,12 @@ section.nisha .nisha__title {
   cursor: pointer;
 }
 
+.inner-account__item:nth-child(1),
+.inner-account__item:nth-child(2),
+.inner-account__item:nth-child(3){
+  margin-top: 0;
+}
+
 .inner-account__item:hover {
   opacity: 0.8;
 }
@@ -1744,6 +1752,7 @@ section.nisha .nisha__title {
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
+  font-weight: 300;
 }
 
 .niche__content {

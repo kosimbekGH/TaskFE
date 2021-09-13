@@ -15,6 +15,8 @@ import {AccountComponent} from "./ui/account/account.component";
 import {AccountMainComponent} from "./ui/account/account-main/account-main.component";
 import {CasesComponent} from "./ui/cases/cases.component";
 import {CasesMainComponent} from "./ui/cases/cases-main/cases-main.component";
+import {TemplatesComponent} from "./ui/templates/templates.component";
+import {TemplateNicheComponent} from "./ui/templates/template-niche/template-niche.component";
 
 const routes: Routes = [
   { path: '', redirectTo: "auth", pathMatch: 'full' },
@@ -35,7 +37,7 @@ const routes: Routes = [
       { path: 'main', component: PlatformMainComponent },
       { path: 'main', component: PlatformMainComponent },
     ],
-    canActivate: [],
+    canActivate: [AuthGuard],
     data: {
       roles: [Role.admin, Role.user]
     }
@@ -71,11 +73,24 @@ const routes: Routes = [
       { path: '', redirectTo: 'main', pathMatch: 'full', },
       { path: 'main', component: CasesMainComponent, },
     ],
-    canActivate: [],
+    canActivate: [AuthGuard],
     data: {
       roles: [Role.admin, Role.user]
     }
   },
+
+  {
+    path: 'template', component: TemplatesComponent,
+    children: [
+      { path: '', redirectTo: 'main', pathMatch: 'full', },
+      { path: 'main', component: TemplateNicheComponent, },
+    ],
+    canActivate: [AuthGuard],
+    data: {
+      roles: [Role.admin, Role.user]
+    }
+  },
+
 
   { path: '*', redirectTo: 'auth', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent, pathMatch: 'full' }

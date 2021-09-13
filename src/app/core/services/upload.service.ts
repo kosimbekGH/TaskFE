@@ -13,6 +13,6 @@ export class UploadService {
   constructor(private _http: HttpClient) { }
 
   upload(formData: FormData) {
-    //fix. paste from management-user-create.component
+    //fix. paste from management-user-profile-creative.component
   }
 }

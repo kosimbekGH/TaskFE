@@ -1,0 +1,25 @@
+.card{
+  display: flex;
+  &__item{
+    margin-top: 3.8rem;
+    margin-right: 2rem;
+    width: 26.1rem;
+    background-color: #fff;
+    border-radius: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5.5rem 9.6rem 7.1rem 8.1rem;
+
+    img{
+      width: 100%;
+      max-width: 5.5rem;
+    }
+  }
+
+  &__item:last-child{
+    margin-right: 0;
+  }
+
+}
+

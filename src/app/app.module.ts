@@ -2,6 +2,7 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatIconModule} from '@angular/material/icon';
 import {AppRoutingModule} from './app-routing.module';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from "@angular/material/dialog";
 import {AppComponent} from './app.component';
 import {AuthWelcomeComponent} from './ui/auth/auth-welcome/auth-welcome.component';
 import {AuthLoginComponent} from './ui/auth/auth-login/auth-login.component';
@@ -33,7 +34,13 @@ import { AccountCasesComponent } from './ui/account/account-cases/account-cases.
 import {VgCoreModule} from '@videogular/ngx-videogular/core';
 import {VgControlsModule} from '@videogular/ngx-videogular/controls';
 import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
-import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';;
+import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
+import { ProfileCreativeComponent } from './ui/account/account-main/profile-creative/profile-creative.component';
+import {ProfileCaseComponent} from "./ui/account/account-main/profile-case/profile-case.component";
+import { EditDialogComponent } from './ui/account/account-main/edit-dialog/edit-dialog.component';
+import {TemplatesComponent} from "./ui/templates/templates.component";
+
+;
 
 @NgModule({
   declarations: [
@@ -52,10 +59,13 @@ import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';;
     AccountComponent,
     AccountMainComponent,
     TemplateNicheComponent,
-    CasesComponent,
     CasesMainComponent,
     CasesCreateComponent,
-    AccountCasesComponent
+    AccountCasesComponent,
+    ProfileCaseComponent,
+    ProfileCreativeComponent,
+    EditDialogComponent,
+    TemplatesComponent
   ],
   imports: [
     VgCoreModule,
@@ -72,7 +82,8 @@ import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';;
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true },

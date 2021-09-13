@@ -7,3 +7,8 @@ export enum CasesEnum {
   My,
   Favorites
 }
+
+export enum SwitchEnum {
+  Case,
+  Creative
+}

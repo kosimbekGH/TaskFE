@@ -1,16 +1,20 @@
-  <main class="page">
+
+<main class="page">
     <section class="account">
       <div class="account__content _container">
         <div class="account__bg">
           <img [src]="consts.pictureAccountBg" >
         </div>
         <div class="account__name name-account">
-            <img class="name-account__img" [src]="user.imageUrl" >
+            <img class="name-account__img"  >
           <div class="name-account__title title">
-            {{user.firstName}} {{user.lastName}}
+            Имя юзера
           </div>
-          <div class="name-account__btn">
+          <div (click)="openDialog()" class="name-account__btn">
             Редактировать профиль
+          </div>
+          <div class="name-account__btn name-account__btn-exit">
+            Выйти
           </div>
         </div>
         <div class="account__inner inner-account">
@@ -23,15 +27,22 @@
                 Избранное
               </div>
             </div>
+
+              <div>
+                <ul *ngIf="selectTypeCases===cases.My" class="account__btn-switcher" >
+
+                  <li class="switch__btn" (click)="switchType(switchBtn.Creative)" [class.active__btn]="switch===switchBtn.Creative" >Кейсы</li>
+                  <li class="switch__btn " (click)="switchType(switchBtn.Case)" [class.active__btn]="switch===switchBtn.Case" >Креативы</li>
+
+                </ul>
+              </div>
           </div>
-
           <app-account-cases *ngIf="selectTypeCases===cases.Favorites" [cases]="casesFavorite" ></app-account-cases>
-          <app-account-cases *ngIf="selectTypeCases===cases.My" [cases]="casesMy" ></app-account-cases>
-
+          <app-account-cases *ngIf="selectTypeCases===cases.My && switch===switchBtn.Creative" [cases]="casesMy" ></app-account-cases>
+          <app-profile-creative *ngIf="switch===switchBtn.Case" [creative]="creativeCount" ></app-profile-creative>
         </div>
       </div>
     </section>
-
 
   </main>
 

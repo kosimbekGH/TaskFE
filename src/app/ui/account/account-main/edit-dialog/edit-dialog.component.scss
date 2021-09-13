@@ -1,0 +1,75 @@
+.edit-dialog {
+  position: relative;
+  padding: 6.5rem 1.8rem 1.8rem 1.8rem;
+  background: #FFFFFF;
+  border-radius: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 28.1rem;
+
+  &__close {
+    top: 1.8rem;
+    right: 1.8rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    img {
+      width: 1rem;
+    }
+  }
+
+  &__close:hover {
+    background: rgba(25, 80, 219, 0.18);
+  }
+
+  &__avatar {
+    background: #C0C0C0;
+    width: 24.5rem;
+    height: 24.5rem;
+    border-radius: 1.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__field {
+
+    input {
+      background-color: #fff;
+      border: 2px solid #BBBBBB;
+      border-radius: 8.5rem;
+      padding: 1.1rem 3.2rem;
+      font-size: 2.5rem;
+      font-weight: 300;
+      display: block;
+      width: 100%;
+      opacity: 0.6;
+      color: var(--main-black);
+      transition: all 0.3s ease 0s;
+    }
+
+  }
+
+  .inner-account__btn {
+    margin-top: 1.9rem;
+    padding: 1.2rem 6.4rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    border-radius: 8.5rem;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+::ng-deep {
+  .mat-dialog-container {
+    padding: 0;
+    border-radius: 2.6rem;
+  }
+}

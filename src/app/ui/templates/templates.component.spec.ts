@@ -19,7 +19,7 @@ describe('TemplatesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should profile-creative', () => {
     expect(component).toBeTruthy();
   });
 });

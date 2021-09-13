@@ -1,0 +1,42 @@
+.page {
+  padding-bottom: 2.1rem;
+
+  .name-account__btn-exit {
+    border: none;
+    margin-top: 1.5rem;
+    font-weight: 400;
+    color: #595959;
+  }
+
+  .account__btn-switcher {
+    width: 28.5rem;
+    height: 4.2rem;
+    background-color: var(--main-blue);
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    color: #fff;
+    font-family: GillSans;
+  }
+
+  .switch__btn {
+    width: 140px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  li.active__btn {
+    border-radius: 5rem;
+    padding: .9rem 5rem;
+    background-color: var(--main-gray);
+    color: rgba(33, 33, 33, 1);
+    text-align: center;
+  }
+}

@@ -13,7 +13,7 @@ export class ConstantHelper {
   static readonly pictureLogoW = 'assets/images/logo-w.png'
   static readonly pictureDefaultNews = 'assets/images/news-illust.svg'
   static readonly picturePlay = 'assets/images/play.svg'
-  static readonly pictureAccountBg = 'assets/images/bg-acc.jpg'
+  static readonly pictureAccountBg = 'assets/images/bg-acc.png'
   static readonly pictureNicheDefault = 'assets/images/house.svg'
 
   static readonly USER_TOKEN = "TOKEN"
