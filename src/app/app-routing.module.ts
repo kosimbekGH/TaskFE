@@ -35,7 +35,7 @@ const routes: Routes = [
       { path: 'main', component: PlatformMainComponent },
       { path: 'main', component: PlatformMainComponent },
     ],
-    canActivate: [AuthGuard],
+    canActivate: [],
     data: {
       roles: [Role.admin, Role.user]
     }
@@ -59,7 +59,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'main', pathMatch: 'full', },
       { path: 'main', component: NewsMainComponent, },
     ],
-    canActivate: [AuthGuard],
+    canActivate: [],
     data: {
       roles: [Role.admin, Role.user]
     }
@@ -71,7 +71,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'main', pathMatch: 'full', },
       { path: 'main', component: CasesMainComponent, },
     ],
-    canActivate: [AuthGuard],
+    canActivate: [],
     data: {
       roles: [Role.admin, Role.user]
     }
